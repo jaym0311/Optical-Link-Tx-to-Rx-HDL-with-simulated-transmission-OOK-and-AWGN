@@ -23,6 +23,17 @@ The project is intended for:
 
 
 
+##  Repository Structure
+- **ook_tx.v**                 #Transmitter HDL
+- **ook_rx.v**                 # Receiver HDL
+- **optical_link_top.v**      # Top-level integration
+- **optical_link_tb.v**        # Testbench with OOK + AWGN
+- **channel.v**                # AWGN Noise
+- **README.md**                # Project explanation
+
+
+
+
 ##
 - **FPGA Toolchain:** Xilinx Vivado (for hardware deployment)
 

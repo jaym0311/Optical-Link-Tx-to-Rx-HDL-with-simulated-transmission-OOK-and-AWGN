@@ -36,8 +36,8 @@ reg data_in_d;  // delayed version for comparison
 // Stimulus
 
 initial begin
-    $dumpfile("ook_awgn.vcd");
-    $dumpvars(0,optical_link_tb );
+    //$dumpfile("ook_awgn.vcd");
+    //$dumpvars(0,optical_link_tb );
 
     // Reset
     #20 rst = 0;
@@ -60,3 +60,34 @@ initial begin
 
     $finish;
 end
+initial begin
+    $monitor("time=%0t total=%0d errors=%0d",
+              $time, total_bits, error_bits);
+end
+
+
+// Align TX and RX for comparison
+
+always @(posedge clk) begin
+    if (rst) begin
+        data_in_d <= 0;
+    end else begin
+        #10 data_in_d <= data_in;  // 1-cycle delay 
+    end
+end
+
+
+// Error counting
+
+always @(posedge clk) begin
+    if (!rst) begin
+        total_bits <= total_bits + 1;
+
+        if (data_out !== data_in_d) begin
+            error_bits <= error_bits + 1;
+        end
+    end
+end
+
+
+endmodule

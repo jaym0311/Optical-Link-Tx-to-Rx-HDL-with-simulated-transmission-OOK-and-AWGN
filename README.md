@@ -39,8 +39,9 @@ The project is intended for:
 
 
 ##  Results
+Compare **data_out** with **data_in_d** ( one cycle delayed version of data_in)
 
-After transmitting 62 bits, there is a error in 1 bit.
+After transmitting 62 bits, there is an error in 1 bit.
 
 
 ## Waveforms

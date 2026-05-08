@@ -41,13 +41,22 @@ The project is intended for:
 ##  Results
 Compare **data_out** with **data_in_d** ( one cycle delayed version of data_in)
 
-After transmitting 62 bits, there is an error in 1 bit.
+After transmitting 100 bits, there is error in 3 bits.
+
+<img width="238" height="62" alt="image" src="https://github.com/user-attachments/assets/7675d400-e98b-407c-bccd-61e422fd4d9c" />
+
 
 
 ## Waveforms
-<img width="1130" height="491" alt="Screenshot 2026-04-21 215109" src="https://github.com/user-attachments/assets/297d6c05-d00d-43d6-9393-f857432b9212" />
-<img width="1131" height="493" alt="Screenshot 2026-04-21 215207" src="https://github.com/user-attachments/assets/3081b06c-a139-4c4a-962f-6b0bdf5e76f5" />
-<img width="1129" height="491" alt="Screenshot 2026-04-21 215311" src="https://github.com/user-attachments/assets/74235321-3273-4a2a-8d38-1b477e56da1d" />
+<img width="1550" height="695" alt="Screenshot 2026-05-08 182705" src="https://github.com/user-attachments/assets/a905ebad-ccb7-4b79-bfc1-d0c6fc75ac00" />.
+
+<img width="1547" height="728" alt="Screenshot 2026-05-08 182930" src="https://github.com/user-attachments/assets/e525a3dc-be30-4b96-a9cb-8341f8eee118" />.
+
+<img width="1548" height="730" alt="Screenshot 2026-05-08 183049" src="https://github.com/user-attachments/assets/10bcf62c-22af-46ca-b636-b7dcc04e9e27" />.
+
+<img width="1553" height="728" alt="Screenshot 2026-05-08 183143" src="https://github.com/user-attachments/assets/60012988-b694-423a-ad66-46112df791a2" />.
+
+
 
 
 

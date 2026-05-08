@@ -16,7 +16,7 @@ The project is intended for:
 - **Receiver (Rx):** Detects and decodes OOK signals under AWGN.
 - **Noise Injection:** AWGN modeled in simulation for realistic channel behavior.
 - **Testbench:** Automated BER calculation with random bit streams.
-- **Waveform Analysis:** VCD dump for GTKWave visualization.
+- **Waveform Analysis:** Compare received bit (data_out) with  one clock cycle delayed version of transmitted data (data_in_d)
 - **Parameterization:** Adjustable bit length, clock frequency, and noise levels.
 
 ---
@@ -41,7 +41,7 @@ The project is intended for:
 ##  Results
 Compare **data_out** with **data_in_d** ( one cycle delayed version of data_in)
 
-After transmitting 100 bits, there is error in 3 bits.
+After transmitting 1000 bits, there is error in 3 bits.
 
 <img width="238" height="62" alt="image" src="https://github.com/user-attachments/assets/7675d400-e98b-407c-bccd-61e422fd4d9c" />
 

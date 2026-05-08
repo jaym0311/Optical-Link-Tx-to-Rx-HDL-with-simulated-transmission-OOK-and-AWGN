@@ -1,3 +1,26 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 20.04.2026 22:06:56
+// Design Name: 
+// Module Name: optical_link_tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
 `timescale 1ns/1ps
 
 module optical_link_tb;
@@ -36,20 +59,20 @@ reg data_in_d;  // delayed version for comparison
 // Stimulus
 
 initial begin
-    //$dumpfile("ook_awgn.vcd");
-    //$dumpvars(0,optical_link_tb );
+    
 
     // Reset
     #20 rst = 0;
 
     // Run random data
-    for (i = 0; i < 10000; i = i + 1) begin
+    for (i = 0; i < 1000; i = i + 1) begin
         @(posedge clk);
         data_in = $random;  // random 0/1
     end
 
-    // Wait a bit
-    #100;
+    
+    #1100; 
+     
 
     // Print results
     $display("Total bits  = %d", total_bits);
@@ -81,6 +104,7 @@ end
 
 always @(posedge clk) begin
     if (!rst) begin
+        if (total_bits < 1000)
         total_bits <= total_bits + 1;
 
         if (data_out !== data_in_d) begin
